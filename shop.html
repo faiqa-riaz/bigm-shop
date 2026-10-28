@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shop | BIG M Merch</title>
+  <meta name="description" content="Der offizielle BIG M Merch Shop: T-Shirts, Caps, Socken und Cappy-Schlüsselanhänger. Kostenloser Versand ab 55 €.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bigm.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- Header: Aufbau wie sebastianmichels.com (Logo | Menü-Leiste | Social Icons) -->
+  <header class="site-hdr">
+    <div class="site-hdr__inner">
+      <a class="site-hdr__logo" href="https://sebastianmichels.com"><img src="assets/img/logo-header.webp" alt="BIG M BigMeatsFood" width="826" height="383"></a>
+      <div class="site-hdr__menu">
+        <div class="sm-menu-bar">
+          <div class="sm-menu-container">
+            <button type="button" class="sm-menu-trigger sm-hamburger" data-sm-trigger aria-label="Menü" aria-expanded="false">
+              <span class="sm-hamburger-lines"><span class="sm-line"></span><span class="sm-line"></span><span class="sm-line"></span></span>
+            </button>
+            <nav class="sm-dropdown-menu" data-sm-dropdown>
+              <a href="https://sebastianmichels.com/#Übermich" class="sm-menu-item">Über mich</a><a href="https://sebastianmichels.com/#MeineMission" class="sm-menu-item">Meine Mission</a><a href="https://sebastianmichels.com/#MeineErfolge" class="sm-menu-item">Meine Erfolge</a><a href="https://sebastianmichels.com/#SozialeNetzwerke" class="sm-menu-item">Soziale Netzwerke</a>
+            </nav>
+          </div>
+          <div class="sm-menu-container">
+            <button type="button" class="sm-menu-trigger sm-shop-trigger" data-sm-trigger aria-label="Shop" aria-expanded="false">
+              <span class="sm-shop-label">Shop</span><span class="sm-chevron"></span>
+            </button>
+            <nav class="sm-dropdown-menu" data-sm-dropdown>
+              <span class="sm-menu-category">Big M Merch</span><div class="sm-submenu-list"><a href="shop.html#produkte" class="sm-menu-item">Alle Produkte</a><a href="shop.html?kat=shirts#produkte" class="sm-menu-item">T-Shirts</a><a href="shop.html?kat=caps#produkte" class="sm-menu-item">Caps</a><a href="shop.html?kat=acc#produkte" class="sm-menu-item">Socken &amp; Accessoires</a></div>
+              <span class="sm-menu-category">Meat</span><div class="sm-submenu-list"><a href="https://meatshop.de/" class="sm-menu-item" target="_blank" rel="noopener noreferrer">Meat Shop</a><a href="https://www.babossa-bbq.de/" class="sm-menu-item" target="_blank" rel="noopener noreferrer">Babossa BBQ</a><a href="https://grillstar.de/" class="sm-menu-item" target="_blank" rel="noopener noreferrer">Grillstar</a></div>
+            </nav>
+          </div>
+          <div class="sm-menu-container">
+            <button type="button" class="sm-menu-trigger sm-cart-trigger" data-open-cart aria-label="Warenkorb öffnen">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              <span class="sm-cart-label">Warenkorb</span><span class="sm-cart-count" data-cart-count>0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="site-hdr__social">
+        <a href="https://www.youtube.com/@BigMeatsFood" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C14.9 167 14.9 256.4 14.9 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2-142.7 81.2z"/></svg></a>
+        <a href="https://www.instagram.com/bigmeatsfood_?igsh=MTJna3p1YXYxd3ZodQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        <a href="https://www.tiktok.com/@bigmeatsfood" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121.2 121.2 0 0 0 1.9 22.2 122.2 122.2 0 0 0 53.9 80.2 121.4 121.4 0 0 0 67 20.1z"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: wie "Banner" der Startseite (schwarz, Padding 250/150, Welle unten gelb) -->
+    <section class="sec sec--hero" aria-labelledby="hero-title">
+      <img class="hero__doodle hero__doodle--burger" src="assets/img/deco-burger.webp" alt="" aria-hidden="true">
+      <img class="hero__doodle hero__doodle--pizza" src="assets/img/deco-pizza.webp" alt="" aria-hidden="true">
+      <div class="wrap">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <h1 class="h1 hero__title" id="hero-title">Big M Merch – für alle, die nie satt werden</h1>
+            <p class="hero__lead">Shirts, Caps, Socken und Cappy für den Schlüsselbund. Offiziell von Big M und in limitierter Auflage.</p>
+            <div class="hero__ctas">
+              <a class="btn" href="#produkte">Jetzt shoppen</a>
+              <a class="btn btn--grey" href="#bundle">Bundle für 49,90 €</a>
+            </div>
+          </div>
+          <div class="hero__art" aria-hidden="true">
+            <div class="hero__blob"></div>
+            <img class="hero__piece hero__piece--shirt" src="assets/img/p86.webp" alt="">
+            <img class="hero__piece hero__piece--cap" src="assets/img/p67.webp" alt="">
+            <img class="hero__piece hero__piece--key" src="assets/img/p72.webp" alt="">
+            <img class="hero__piece hero__piece--sock" src="assets/img/p104.webp" alt="">
+          </div>
+        </div>
+      </div>
+      <svg class="divider" style="--fill:#FFBF1A" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+
+    <!-- Kollektion: gelb wie "About us" -->
+    <section class="sec sec--yellow" id="produkte" aria-labelledby="shop-title">
+      <div class="wrap">
+        <div class="shop__head">
+          <div>
+            <span class="kicker">Offizieller Merch</span>
+            <h2 class="h2" id="shop-title">Die Kollektion</h2>
+            <p class="shop__count" data-result>8 Produkte</p>
+          </div>
+          <div class="filters" role="group" aria-label="Kategorie filtern">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">Alle</button>
+            <button class="chip" type="button" data-filter="shirts" aria-pressed="false">T-Shirts</button>
+            <button class="chip" type="button" data-filter="caps" aria-pressed="false">Caps</button>
+            <button class="chip" type="button" data-filter="acc" aria-pressed="false">Socken &amp; Accessoires</button>
+          </div>
+        </div>
+        <div class="grid" data-grid></div>
+      </div>
+      <svg class="divider" style="--fill:#1C1C1C" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+
+    <!-- Bundle: schwarz wie "Mission" -->
+    <section class="sec sec--black" id="bundle" aria-labelledby="bundle-title">
+      <div class="wrap">
+        <div class="bundle__inner">
+          <div>
+            <span class="kicker kicker--blue">Bundle-Deal</span>
+            <h2 class="h2" id="bundle-title">Shirt + Socken im Bundle</h2>
+            <p class="lead">Such dir dein Lieblingsshirt aus und pack die Big M Socken direkt dazu. Im Bundle zahlst du 49,90 € statt 54,80 € und sparst 4,90 €. Ab 55 € ist der Versand kostenlos.</p>
+            <div class="bundle__price">
+              <span class="bundle__now">49,90 €</span>
+              <span class="bundle__was">54,80 €</span>
+            </div>
+            <a class="btn" href="produkt.html?p=shirt-mocha#bundle">Bundle zusammenstellen</a>
+          </div>
+          <div class="bundle__art">
+            <a class="bundle__plate bundle__plate--a" href="produkt.html?p=shirt-mocha#bundle" aria-label="T-Shirt Big Food Big Love"><img src="assets/img/p86.webp" alt="" loading="lazy"></a>
+            <a class="bundle__plate bundle__plate--b" href="produkt.html?p=socks" aria-label="Big M Socken"><img src="assets/img/p102.webp" alt="" loading="lazy"></a>
+            <span class="bundle__plus" aria-hidden="true">+</span>
+          </div>
+        </div>
+      </div>
+      <svg class="divider" style="--fill:#23AADC" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+
+    <!-- Qualität: blau wie "Meine Erfolge" -->
+    <section class="sec sec--blue sec--flush" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="sec-head sec-head--center">
+          <span class="kicker">Qualität &amp; Details</span>
+          <h2 class="h2" id="why-title">Gemacht wie eine XXL-Portion</h2>
+        </div>
+        <div class="bento">
+          <article class="tile tile--a">
+            <span class="kicker">Caps</span>
+            <h3 class="h3">Innen und außen gestaltet</h3>
+            <p>Unsere Caps tragen ihr Design nicht nur vorne. Auch unter dem Schirm und innen wartet ein eigener Print, den so nur du kennst.</p>
+            <img class="tile__img" src="assets/img/p66.webp" alt="Big M Cap mit I LOVE FOOD Print" loading="lazy">
+          </article>
+          <article class="tile tile--b">
+            <span class="kicker">T-Shirts</span>
+            <h3 class="h3">Bio-Baumwolle, fair produziert</h3>
+            <p>Weich, langlebig und nachhaltig hergestellt. Für Herren und Damen.</p>
+            <img class="tile__img" src="assets/img/p89.webp" alt="" loading="lazy">
+          </article>
+          <article class="tile tile--c">
+            <span class="kicker kicker--blue">Versand</span>
+            <span class="tile__big">55 €</span>
+            <p>Ab diesem Bestellwert verschicken wir kostenlos mit DHL.</p>
+          </article>
+          <article class="tile tile--d">
+            <span class="kicker">Limitiert</span>
+            <span class="tile__big">150</span>
+            <p>Stück pro Cap-Design. Wenn weg, dann weg.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement: blau mit großer gelber Zeile wie "Marquee Text" -->
+    <section class="sec sec--blue sec--statement" aria-label="Über die Kollektion">
+      <p class="statement__big" aria-hidden="true">Big Food. Big Merch.</p>
+      <div class="wrap">
+        <p class="statement__text">Big M steht für große Portionen, ehrliche Reaktionen und richtig viel Liebe zum Essen. Genau das steckt in dieser Kollektion: gestaltet für die Community und gemacht für alle, die beim Nachschlag nie Nein sagen.</p>
+      </div>
+      <svg class="divider" style="--fill:#FFBF1A" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+
+    <!-- Lookbook: gelb wie "Social media" -->
+    <section class="sec sec--yellow" aria-labelledby="look-title">
+      <div class="wrap">
+        <div class="look__inner">
+          <div class="look__side">
+            <div class="look__pin">
+              <span class="kicker">Lookbook</span>
+              <h2 class="h2" id="look-title">So sieht Big Love aus</h2>
+              <p class="lead">Drei Shirt-Designs, drei Caps, Socken und Cappy. Kombinier, was dir schmeckt, und zeig es der Community.</p>
+              <a class="btn btn--grey" href="#produkte">Zur Kollektion</a>
+            </div>
+          </div>
+          <div class="look__list">
+            <a class="look__item" href="produkt.html?p=shirt-mocha"><div class="look__frame"><img src="assets/img/p88.webp" alt="Model trägt das Shirt Big Food Big Love von hinten" loading="lazy"></div><div class="look__cap"><b>Big Food Big Love</b><span>39,90 €</span></div></a>
+            <a class="look__item" href="produkt.html?p=socks"><div class="look__frame"><img src="assets/img/p103.webp" alt="Weiße Big M Socken mit Sneakern" loading="lazy"></div><div class="look__cap"><b>Big M Socken</b><span>14,90 €</span></div></a>
+            <a class="look__item" href="produkt.html?p=shirt-white"><div class="look__frame"><img src="assets/img/p95.webp" alt="Model trägt das Shirt Sry I was busy" loading="lazy"></div><div class="look__cap"><b>Sry I was busy</b><span>39,90 €</span></div></a>
+            <a class="look__item" href="produkt.html?p=keychain"><div class="look__frame"><img src="assets/img/p75.webp" alt="Cappy Schlüsselanhänger an einer Jeans" loading="lazy"></div><div class="look__cap"><b>Cappy</b><span>9,90 €</span></div></a>
+            <a class="look__item" href="produkt.html?p=shirt-black"><div class="look__frame"><img src="assets/img/p98.webp" alt="Model trägt das Shirt Big Mood for Food" loading="lazy"></div><div class="look__cap"><b>Big Mood for Food</b><span>39,90 €</span></div></a>
+          </div>
+        </div>
+      </div>
+      <svg class="divider" style="--fill:#1C1C1C" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+
+    <!-- Abschluss: schwarz wie "External links", Welle unten blau in den Footer -->
+    <section class="sec sec--black sec--last" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta__inner">
+          <div>
+            <span class="kicker kicker--blue">Limitierte Auflage</span>
+            <h2 class="h2" id="cta-title">Hunger auf Merch?</h2>
+          </div>
+          <div class="cta__side">
+            <p class="lead">Die Auflage ist limitiert. Sichere dir dein Lieblingsteil, bevor es weg ist.</p>
+            <a class="btn" href="#produkte">Jetzt shoppen</a>
+          </div>
+        </div>
+      </div>
+      <svg class="divider" style="--fill:#23AADC" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
+    </section>
+  </main>
+
+  <!-- Elementor-Formteiler "waves" (aus dem Elementor-Plugin der Live-Seite) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs><path id="wave" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"/></defs>
+  </svg>
+
+  <!-- Footer: wie sebastianmichels.com, ergänzt um die Pflichtlinks des Shops -->
+  <footer class="site-ftr">
+    <div class="site-ftr__inner">
+      <p><a href="https://sebastianmichels.com/impressum/">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a> | <a href="#">Widerrufsbelehrung</a> | <a href="#">Versand &amp; Zahlung</a></p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="scrim"></div>
+  <aside class="drawer" aria-label="Warenkorb" aria-modal="true" role="dialog">
+    <div class="drawer__head">
+      <h2 class="h3">Warenkorb (<span data-cart-count>0</span>)</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Warenkorb schließen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="ship" data-ship>
+      <span data-ship-text>Noch <b>55,00 €</b> bis zum kostenlosen Versand</span>
+      <div class="ship__bar"><div class="ship__fill" data-ship-fill></div></div>
+    </div>
+    <div class="drawer__items" data-cart-items></div>
+    <div class="drawer__foot">
+      <div class="drawer__row drawer__row--total"><span>Zwischensumme</span><span data-subtotal>0,00 €</span></div>
+      <p class="drawer__note">inkl. MwSt., Versandkosten werden an der Kasse berechnet.</p>
+      <button class="btn btn--ink btn--block btn--lg" type="button" data-checkout>Zur Kasse</button>
+    </div>
+  </aside>
+  <div class="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/bigm.js"></script>
+</body>
+</html>
