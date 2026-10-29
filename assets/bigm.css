@@ -806,8 +806,6 @@ body { font-size: 1.2rem; line-height: 1.4; }
   .sec--pagetop::before { background-size: auto 120%; opacity: .7; }
   .pagetop__perks li { padding: 8px 10px; font-size: .85rem; }
   .pagetop__perks li:nth-child(n+2) { display: none; }
-  .sec--hero::before { background-position: 70% 0; background-size: auto 70%; }
-  .sec--hero::after { background: linear-gradient(180deg, rgba(28, 28, 28, .55) 0%, rgba(28, 28, 28, .9) 45%, rgba(28, 28, 28, .6) 100%); }
   .hero__doodle { display: none; }
   .hero__lead { font-size: 15px; line-height: 24px; }
   .btn { padding: 12px 20px 10px; font-size: 15px; }
@@ -902,6 +900,16 @@ body { font-size: 1.2rem; line-height: 1.4; }
   .site-hdr .sm-menu-bar { gap: 5px; }
   .site-hdr__menu { left: calc(50% - 6px); }
   .sm-menu-bar .sm-shop-trigger { padding: 0 10px; }
+}
+
+/* Hero auf Tablet und Handy: Raster deckt die ganze Fläche (dichte rechte Bildhälfte),
+   oben dunkler hinter dem Text, unten heller hinter den Produkten */
+@media (max-width: 900px) {
+  .sec--hero::before { background-size: auto 100%; background-position: right top; opacity: .75; }
+  .sec--hero::after {
+    background: linear-gradient(180deg, rgba(28, 28, 28, .94) 0%, rgba(28, 28, 28, .88) 32%, rgba(28, 28, 28, .35) 58%, rgba(28, 28, 28, .25) 82%, rgba(28, 28, 28, .65) 100%);
+  }
+  .sec--pagetop::before { background-size: auto 220%; background-position: right top; }
 }
 
 @media (prefers-reduced-motion: reduce) {
