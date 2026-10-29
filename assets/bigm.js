@@ -227,6 +227,29 @@
     if (chip) chip.click();
   }
 
+  /* ---------- Accordion: immer nur ein Punkt offen, Höhe per CSS-Transition animiert ----------
+     Die <details> bleiben technisch offen, damit der Inhalt animiert werden kann; sichtbar ist nur
+     der Punkt mit .is-open. Geschlossene Inhalte sind inert (nicht fokussierbar, nicht vorgelesen). */
+  function initAccordion(root) {
+    var items = $$("details", root);
+    function set(d, open) {
+      var body = d.querySelector(".acc__body"), sum = d.querySelector("summary");
+      d.classList.toggle("is-open", open);
+      sum.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) body.removeAttribute("inert"); else body.setAttribute("inert", "");
+    }
+    items.forEach(function (d) {
+      d.open = true;
+      set(d, d.classList.contains("is-open"));
+      d.querySelector("summary").addEventListener("click", function (e) {
+        e.preventDefault();
+        var opening = !d.classList.contains("is-open");
+        items.forEach(function (o) { if (o !== d) set(o, false); });
+        set(d, opening);
+      });
+    });
+  }
+
   /* ---------- Header menu (Shortcode-Skript der Live-Seite) ---------- */
   function initMenu() {
     var containers = $$(".sm-menu-bar .sm-menu-container");
@@ -412,8 +435,9 @@
     else acc.push({ t: "Details", h: "<ul>" + p.details.map(function (d) { return "<li>" + d + "</li>"; }).join("") + "</ul>" });
     acc.push(SHIP_ACC);
     $("[data-acc]").innerHTML = acc.map(function (a, i) {
-      return "<details" + (i ? "" : " open") + "><summary>" + a.t + ICON.plus + '</summary><div class="acc__body">' + a.h + "</div></details>";
+      return "<details" + (i ? "" : ' open class="is-open"') + "><summary>" + a.t + ICON.plus + '</summary><div class="acc__body"><div class="acc__inner">' + a.h + "</div></div></details>";
     }).join("");
+    initAccordion($("[data-acc]"));
 
     /* Story band */
     $("[data-tagline]").innerHTML = p.tagline[0] + '<br><span class="hl-yellow">' + p.tagline[1] + "</span>";

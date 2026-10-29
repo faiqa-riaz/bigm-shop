@@ -539,8 +539,15 @@ p { text-wrap: pretty; }
 .acc summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 18px 0; cursor: pointer; font-weight: 700; font-size: 16px; }
 .acc summary::-webkit-details-marker { display: none; }
 .acc summary svg { width: 22px; height: 22px; transition: transform .35s var(--ease); }
-.acc details[open] summary svg { transform: rotate(45deg); }
-.acc__body { padding: 0 0 20px; color: var(--ink-2); font-size: 15px; }
+.acc details.is-open summary svg { transform: rotate(45deg); }
+.acc summary:hover { color: var(--blue-deep); }
+/* Aufklappen: Grid-Zeile 0fr -> 1fr animiert die echte Inhaltshöhe ohne feste Pixelwerte */
+.acc__body { display: grid; grid-template-rows: 0fr; opacity: 0; color: var(--ink-2); font-size: 15px; transition: grid-template-rows .4s cubic-bezier(.22, 1, .36, 1), opacity .3s ease; }
+.acc__inner { min-height: 0; overflow: hidden; }
+.acc__inner > :first-child { margin-top: 0; }
+.acc__inner > :last-child { margin-bottom: 20px; }
+.acc details.is-open .acc__body { grid-template-rows: 1fr; opacity: 1; }
+.acc summary svg { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
 .acc__body ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .acc__body p { margin: 0 0 10px; }
 
