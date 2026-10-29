@@ -826,6 +826,84 @@ body { font-size: 1.2rem; line-height: 1.4; }
   .sec--statement { padding-top: 10px; }
 }
 
+/* =====================================================================
+   Responsive-Feinschliff (Review der GitHub-Vorschau)
+   ===================================================================== */
+
+/* Produktkarten: gleiche Höhe, Bild / Kategorie / Titel / Preis stehen in jeder Reihe auf einer Linie */
+.grid { align-items: stretch; }
+.card { height: 100%; }
+.card__media { flex: none; }
+.card__body { flex: 1 1 auto; }
+.card__cat { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card__title {
+  min-height: calc(2 * 1.3em);
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
+}
+.card__row { margin-top: auto; padding-top: 8px; align-items: flex-end; }
+
+/* Hero: echtes Zwei-Spalten-Raster, Text und Produktbild können sich nicht mehr überlagern */
+.sec--hero .hero__inner { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 40px; }
+.sec--hero .hero__copy { max-width: 640px; }
+.sec--hero .hero__art { position: relative; right: auto; bottom: auto; width: 100%; max-width: 600px; margin: 0 0 -40px auto; justify-self: end; }
+
+/* Cap-Kachel: Bild steht im Fluss unter dem Text, der blaue Blob liegt nur hinter der Cap */
+.tile--a { background: #F7F7F7; }
+.tile--a .tile__img {
+  position: relative; right: auto; bottom: auto; z-index: 0;
+  width: min(78%, 440px); margin: auto -24px -40px auto; padding: 6% 4% 0;
+  background: url(img/deco-blob.webp) center 60% / 92% no-repeat;
+  filter: drop-shadow(0 24px 30px rgba(0, 0, 0, .25));
+}
+.tile--a p { max-width: 34ch; }
+
+/* T-Shirt-Kachel: Titel bricht nicht mehr mitten im Wort */
+.tile--b .h3 { hyphens: manual; }
+
+@media (max-width: 1100px) {
+  .tile.tile--b { padding-right: calc(36% + 24px); }
+  .tile--b .tile__img { width: 36%; }
+  .tile--b .h3, .tile--c .h3, .tile--d .h3 { font-size: 2rem; }
+  .tile__big { font-size: clamp(3.2rem, 6vw, 5rem); }
+}
+
+@media (max-width: 900px) {
+  .sec--hero .hero__inner { grid-template-columns: 1fr; gap: 10px; }
+  .sec--hero .hero__copy { max-width: none; }
+  .sec--hero .hero__art { width: min(100%, 460px); margin: 10px auto -30px; justify-self: center; }
+  .tile--a { min-height: 0; }
+  .tile--a .tile__img { width: min(70%, 380px); margin: 24px -10px -30px auto; }
+  .bundle__art { width: 100%; max-width: 520px; margin: 10px auto 0; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .tile--a { grid-row: span 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 24px; align-items: start; }
+  .tile--a > :not(.tile__img) { grid-column: 1; }
+  .tile--a .tile__img { grid-column: 2; grid-row: 1 / span 3; width: 100%; margin: 0 -10px 0 0; align-self: center; }
+}
+
+@media (max-width: 600px) {
+  .tile.tile--b { padding-right: 20px; padding-bottom: 230px; }
+  .card .swatches { display: none; }
+  .card__row { padding-right: 44px; }
+  .tile--b .tile__img { width: 100%; }
+  .tile--a .tile__img { width: 86%; margin: 20px -8px -24px auto; }
+  .tile--a { min-height: 0; }
+  .bento { grid-auto-rows: auto; }
+  .tile--c, .tile--d { min-height: 220px; }
+}
+
+/* Sehr schmale Telefone (360 px): Header-Elemente bekommen Luft */
+@media (max-width: 400px) {
+  .site-hdr { padding: 0 12px; }
+  .site-hdr__logo { width: 62px; }
+  .site-hdr__social { gap: 4px; }
+  .site-hdr__social a { width: 22px; height: 22px; }
+  .site-hdr__social svg { width: 13px; height: 13px; }
+  .site-hdr .sm-menu-bar { gap: 5px; }
+  .site-hdr__menu { left: calc(50% - 6px); }
+  .sm-menu-bar .sm-shop-trigger { padding: 0 10px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
