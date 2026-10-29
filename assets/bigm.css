@@ -905,9 +905,9 @@ body { font-size: 1.2rem; line-height: 1.4; }
 /* Hero auf Tablet und Handy: derselbe Halbton-Verlauf wie auf dem Desktop, nur von oben
    (kein Raster hinter dem Text) nach unten (dichtes Raster hinter den Produkten) */
 @media (max-width: 900px) {
-  .sec--hero::before { background: url(img/hero-halftone-v.webp) center bottom / cover no-repeat; opacity: .9; }
+  .sec--hero::before { background: url(img/hero-halftone-v.webp) center bottom / cover no-repeat; opacity: .85; }
   .sec--hero::after {
-    background: linear-gradient(180deg, rgba(28, 28, 28, .6) 0%, rgba(28, 28, 28, 0) 35%, rgba(28, 28, 28, 0) 88%, rgba(28, 28, 28, .45) 100%);
+    background: linear-gradient(180deg, #1C1C1C 0%, rgba(28, 28, 28, .92) 22%, rgba(28, 28, 28, .6) 45%, rgba(28, 28, 28, .25) 68%, rgba(28, 28, 28, .1) 86%, rgba(28, 28, 28, .4) 100%);
   }
   .sec--pagetop::before { background: url(img/hero-halftone-v.webp) center bottom / cover no-repeat; opacity: .6; }
 }
