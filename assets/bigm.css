@@ -902,14 +902,14 @@ body { font-size: 1.2rem; line-height: 1.4; }
   .sm-menu-bar .sm-shop-trigger { padding: 0 10px; }
 }
 
-/* Hero auf Tablet und Handy: Raster deckt die ganze Fläche (dichte rechte Bildhälfte),
-   oben dunkler hinter dem Text, unten heller hinter den Produkten */
+/* Hero auf Tablet und Handy: derselbe Halbton-Verlauf wie auf dem Desktop, nur von oben
+   (kein Raster hinter dem Text) nach unten (dichtes Raster hinter den Produkten) */
 @media (max-width: 900px) {
-  .sec--hero::before { background-size: auto 100%; background-position: right top; opacity: .75; }
+  .sec--hero::before { background: url(img/hero-halftone-v.webp) center bottom / cover no-repeat; opacity: .9; }
   .sec--hero::after {
-    background: linear-gradient(180deg, rgba(28, 28, 28, .94) 0%, rgba(28, 28, 28, .88) 32%, rgba(28, 28, 28, .35) 58%, rgba(28, 28, 28, .25) 82%, rgba(28, 28, 28, .65) 100%);
+    background: linear-gradient(180deg, rgba(28, 28, 28, .6) 0%, rgba(28, 28, 28, 0) 35%, rgba(28, 28, 28, 0) 88%, rgba(28, 28, 28, .45) 100%);
   }
-  .sec--pagetop::before { background-size: auto 220%; background-position: right top; }
+  .sec--pagetop::before { background: url(img/hero-halftone-v.webp) center bottom / cover no-repeat; opacity: .6; }
 }
 
 @media (prefers-reduced-motion: reduce) {
